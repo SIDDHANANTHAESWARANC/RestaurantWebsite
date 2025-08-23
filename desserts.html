@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desserts</title>
+  <link rel="stylesheet" href="food munch.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+  function placeOrder(itemName, price, qtyInputId) {
+    let qty = document.getElementById(qtyInputId).value;
+    let total = qty * price;
+    document.getElementById("orderDetails").innerText = 
+      qty + " × " + itemName + " ordered.\nTotal: ₹" + total;
+
+    var myModal = new bootstrap.Modal(document.getElementById('orderModal'));
+    myModal.show();
+  }
+  </script>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Desserts</h1>
+    <div class="row">
+
+      <!-- Item 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/chocolate-cake.jpg" class="card-img-top" alt="Chocolate Cake">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chocolate Cake</h5>
+            <p class="card-text">Price: ₹180</p>
+            <input type="number" id="qty-choc" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Chocolate Cake', 180, 'qty-choc')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/ice-cream.jpg" class="card-img-top" alt="Ice Cream">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ice Cream</h5>
+            <p class="card-text">Price: ₹120</p>
+            <input type="number" id="qty-ice" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Ice Cream', 120, 'qty-ice')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/cheesecake.jpg" class="card-img-top" alt="Cheesecake">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cheesecake</h5>
+            <p class="card-text">Price: ₹220</p>
+            <input type="number" id="qty-cheese" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Cheesecake', 220, 'qty-cheese')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/brownie.jpg" class="card-img-top" alt="Brownie">
+          <div class="card-body text-center">
+            <h5 class="card-title">Brownie</h5>
+            <p class="card-text">Price: ₹150</p>
+            <input type="number" id="qty-brownie" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Brownie', 150, 'qty-brownie')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/gulab-jamun.jpg" class="card-img-top" alt="Gulab Jamun">
+          <div class="card-body text-center">
+            <h5 class="card-title">Gulab Jamun</h5>
+            <p class="card-text">Price: ₹100</p>
+            <input type="number" id="qty-gulab" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Gulab Jamun', 100, 'qty-gulab')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/rasmalai.jpg" class="card-img-top" alt="Rasmalai">
+          <div class="card-body text-center">
+            <h5 class="card-title">Rasmalai</h5>
+            <p class="card-text">Price: ₹140</p>
+            <input type="number" id="qty-rasmalai" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Rasmalai', 140, 'qty-rasmalai')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/tiramisu.jpg" class="card-img-top" alt="Tiramisu">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tiramisu</h5>
+            <p class="card-text">Price: ₹250</p>
+            <input type="number" id="qty-tiramisu" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Tiramisu', 250, 'qty-tiramisu')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/waffles.jpg" class="card-img-top" alt="Waffles">
+          <div class="card-body text-center">
+            <h5 class="card-title">Waffles</h5>
+            <p class="card-text">Price: ₹160</p>
+            <input type="number" id="qty-waffle" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Waffles', 160, 'qty-waffle')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 9 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/custard.jpg" class="card-img-top" alt="Custard">
+          <div class="card-body text-center">
+            <h5 class="card-title">Custard</h5>
+            <p class="card-text">Price: ₹130</p>
+            <input type="number" id="qty-custard" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Custard', 130, 'qty-custard')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <h5 class="modal-title mb-3">✅ Order Placed!</h5>
+        <p id="orderDetails"></p>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

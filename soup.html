@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soups</title>
+  <link rel="stylesheet" href="food munch.css"> <!-- link your CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+  function placeOrder(itemName, price, qtyInputId) {
+    let qty = document.getElementById(qtyInputId).value;
+    let total = qty * price;
+    document.getElementById("orderDetails").innerText = 
+      qty + " × " + itemName + " ordered.\nTotal: ₹" + total;
+
+    var myModal = new bootstrap.Modal(document.getElementById('orderModal'));
+    myModal.show();
+  }
+  </script>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Soups</h1>
+    <div class="row">
+
+      <!-- Soup 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/tomato-soup.jpg" class="card-img-top" alt="Tomato Soup">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tomato Soup</h5>
+            <p class="card-text">Price: ₹120</p>
+            <input type="number" id="qty-tomato" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Tomato Soup', 120, 'qty-tomato')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soup 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/sweet-corn-soup.jpg" class="card-img-top" alt="Sweet Corn Soup">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sweet Corn Soup</h5>
+            <p class="card-text">Price: ₹130</p>
+            <input type="number" id="qty-sweetcorn" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Sweet Corn Soup', 130, 'qty-sweetcorn')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soup 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/hot-sour-soup.jpg" class="card-img-top" alt="Hot & Sour Soup">
+          <div class="card-body text-center">
+            <h5 class="card-title">Hot & Sour Soup</h5>
+            <p class="card-text">Price: ₹140</p>
+            <input type="number" id="qty-hotsour" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Hot & Sour Soup', 140, 'qty-hotsour')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soup 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/chicken-clear-soup.jpg" class="card-img-top" alt="Chicken Clear Soup">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chicken Clear Soup</h5>
+            <p class="card-text">Price: ₹150</p>
+            <input type="number" id="qty-chickenclear" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Chicken Clear Soup', 150, 'qty-chickenclear')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soup 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/mutton-soup.jpg" class="card-img-top" alt="Mutton Soup">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mutton Soup</h5>
+            <p class="card-text">Price: ₹180</p>
+            <input type="number" id="qty-mutton" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Mutton Soup', 180, 'qty-mutton')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soup 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/veg-clear-soup.jpg" class="card-img-top" alt="Veg Clear Soup">
+          <div class="card-body text-center">
+            <h5 class="card-title">Veg Clear Soup</h5>
+            <p class="card-text">Price: ₹110</p>
+            <input type="number" id="qty-vegclear" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Veg Clear Soup', 110, 'qty-vegclear')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soup 7 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/manchow-soup.jpg" class="card-img-top" alt="Manchow Soup">
+          <div class="card-body text-center">
+            <h5 class="card-title">Manchow Soup</h5>
+            <p class="card-text">Price: ₹140</p>
+            <input type="number" id="qty-manchow" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Manchow Soup', 140, 'qty-manchow')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soup 8 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/egg-drop-soup.jpg" class="card-img-top" alt="Egg Drop Soup">
+          <div class="card-body text-center">
+            <h5 class="card-title">Egg Drop Soup</h5>
+            <p class="card-text">Price: ₹135</p>
+            <input type="number" id="qty-eggdrop" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Egg Drop Soup', 135, 'qty-eggdrop')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soup 9 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow mb-4 p-3">
+          <img src="images/paya-soup.jpg" class="card-img-top" alt="Paya Soup">
+          <div class="card-body text-center">
+            <h5 class="card-title">Paya Soup</h5>
+            <p class="card-text">Price: ₹200</p>
+            <input type="number" id="qty-paya" class="form-control text-center mb-3" value="1" min="1" max="10">
+            <button class="btn btn-warning" onclick="placeOrder('Paya Soup', 200, 'qty-paya')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <h5 class="modal-title mb-3">✅ Order Placed!</h5>
+        <p id="orderDetails"></p>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
