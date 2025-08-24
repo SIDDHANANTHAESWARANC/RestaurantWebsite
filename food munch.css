@@ -304,3 +304,15 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.card-img-top {
+  width: 100%;         /* fill card width */
+  height: 150px;       /* fixed height for all images */
+  object-fit: cover;   /* crop nicely without distortion */
+  border-radius: 8px;  /* optional: smooth corners */
+}
+
+.card {
+  max-width: 300px;   /* limit card width */
+  margin: auto;       /* center cards */
+}
